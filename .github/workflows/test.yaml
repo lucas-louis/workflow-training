@@ -27,5 +27,8 @@ jobs:
       - name: Run unit-tests
         run: make tests_run
 
-      - name: Run coverage
-        run: make coverage
+      - name: upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage_outputs
+          path: ./tests_output.txt

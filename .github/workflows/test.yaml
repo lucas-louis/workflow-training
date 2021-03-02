@@ -23,7 +23,8 @@ jobs:
       - name: run coverage
         run: make coverage >> tests_output.txt
 
-      - uses: actions/upload-artifact@v2
+      - name: upload
+        uses: actions/upload-artifact@v2
         with:
           name: coverage_outputs
           path: ./tests_output.txt

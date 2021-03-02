@@ -1,4 +1,4 @@
-name: Super-Linter
+name: Tests
 
 # Run this workflow every time a new commit pushed to your repository
 on:
@@ -10,9 +10,9 @@ on:
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
-  super-lint:
+  hello-world:
     # Name the Job
-    name: Tests
+    name: hello-world
     # Set the type of machine to run on
     runs-on: ubuntu-20.04
 

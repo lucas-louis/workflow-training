@@ -17,6 +17,7 @@ jobs:
     
   unit-test:
     name: unit_test
+    runs-on: ubuntu-20.04
     container: epitest-docker
 
     steps:

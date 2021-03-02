@@ -15,12 +15,15 @@ jobs:
 
     steps:
       - name: Checkout code
+        continue-on-error: true
         uses: actions/checkout@v2
 
       - name: run unit_tests
+        continue-on-error: true
         run: make tests_run >> tests_output.txt
 
       - name: run coverage
+        continue-on-error: true
         run: make coverage >> tests_output.txt
 
       - name: upload

@@ -1,10 +1,11 @@
 name: Tests
 
-on: push
-  branches:
-    - dev
-    - main
-    - dev2
+on:
+  push
+    branches:
+      - dev
+      - main
+      - dev2
 
 jobs:
   test:

@@ -8,7 +8,7 @@ on:
 
 jobs:
   unit-test:
-    container: epitest-docker
+    container: epitechcontent/epitest-docker
 
     name: unit-test
     runs-on: ubuntu-20.04

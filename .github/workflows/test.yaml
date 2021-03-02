@@ -18,7 +18,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: run unit_tests
-        run: make tests_run
+        run: make tests_run >> tests_output.txt
 
       - name: run coverage
-        run: make coverage
+        run: make coverage >> tests_output.txt
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: coverage_outputs
+          path: ./tests_output.txt

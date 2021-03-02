@@ -1,6 +1,5 @@
 name: Tests
 
-# Run this workflow every time a new commit pushed to your repository
 on:
   push:
     branches:
@@ -8,15 +7,24 @@ on:
       - dev
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
   hello-world:
-    # Name the Job
     name: hello-world
-    # Set the type of machine to run on
     runs-on: ubuntu-20.04
 
     steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Say hello world
         run: echo Welcome to the Github Actions workshop !
+    
+  unit-test:
+    name: unit_test
+    container: epitest-docker
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run unit-tests
+        run: make tests_run
+
+      - name: Run coverage
+        run: make coverage

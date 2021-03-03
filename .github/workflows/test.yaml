@@ -1,8 +1,8 @@
 name: Tests
 
 on:
-  pull_request:
-      - main
+  push:
+    branches:
       - master
       - dev
 

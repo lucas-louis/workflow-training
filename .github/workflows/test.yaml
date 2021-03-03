@@ -7,7 +7,7 @@ on:
       - dev
 
 jobs:
-   hello-world:
+  hello-world:
     name: hello-world
     runs-on: ubuntu-20.04
 

@@ -63,8 +63,8 @@ tests_run:	$(SRC_OBJ) $(TEST_OBJ)
 	./$(TEST_BIN)
 
 ## Get coverage
-.PHONY: coverag
-coverag:
+.PHONY: coverage
+coverage:
 	gcovr -b --exclude-directories tests
 	gcovr -r . --exclude-directories tests
 

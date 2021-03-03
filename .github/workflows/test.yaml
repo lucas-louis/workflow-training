@@ -62,5 +62,5 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v2
         with:
-          name: function-tests_outpouts
+          name: function-tests_outputs
           path: ./tests_output.txt
